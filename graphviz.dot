@@ -1,0 +1,45 @@
+
+    digraph myGraph{
+    node[shape=box fillcolor="#FFEDBB" style=filled]
+    subgraph cluster_p{
+        label = "Matriz Dispersa"
+        bgcolor = "#398D9C"
+        edge[dir = "none"]
+        /*Here we start creating the columns.
+        color = "#398D9C" style=invisible
+        */
+        Row1[label="r1"]
+        Row2[label="r2"]
+        Row3[label="r3"]
+        Row4[label="r4"]
+        Row5[label="r5"]
+        Row6[label="r6"]
+        Row7[label="r7"]
+
+        Row1 -> Row2;
+
+
+        Fila1[label="1", group=1];
+        Fila2[label="2", group=2];
+        Fila3[label="3", group=3];
+        Fila4[label="4", group=4];
+        Fila5[label="5", group=5];
+        /*Linkin the nodes*/
+        Fila1 -> Fila2;
+        Fila2 -> Fila3;
+        Fila3 -> Fila4;
+        Fila4 -> Fila5;
+        /*Enlazando los nodos de las filas.*/
+        Columna1[label = "1", group = 2, fillcolor=yellow]
+        Columna2[label = "2", group = 3, fillcolor=yellow]
+        Columna3[label = "3", group = 4, fillcolor=yellow]
+        Columna4[label = "4", group = 5, fillcolor=yellow]
+        Columna5[label = "5", group = 6, fillcolor=yellow]
+        /*Enlazando los nodos de las columnas.*/
+        Columna1 -> Columna2
+        Columna2 -> Columna3
+        Columna3 -> Columna4
+        Columna4 -> Columna5
+    }
+}  
+    
